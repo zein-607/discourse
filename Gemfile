@@ -97,7 +97,7 @@ gem "rake"
 
 gem "thor", require: false
 gem "diffy", require: false
-gem "sidekiq"
+gem "sidekiq", ">= 8.0.0"
 gem "mini_scheduler"
 
 gem "execjs", require: false
@@ -105,16 +105,16 @@ gem "mini_racer"
 
 gem "highline", require: false
 
-gem "rack"
+gem "rack", ">= 2.2.14"
 
-gem "rack-protection" # security
+gem "rack-protection" , ">= 4.0.0" # security
 gem "cbor", require: false
 gem "cose", require: false
 gem "addressable"
 gem "json_schemer"
 
 gem "net-smtp", require: false
-gem "net-imap", require: false
+gem "net-imap", ">= 0.5.7", require: false
 gem "net-pop", require: false
 gem "digest", require: false
 
