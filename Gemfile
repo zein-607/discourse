@@ -8,20 +8,20 @@ source "https://rubygems.org"
 
 gem "bootsnap", require: false, platform: :mri
 
-gem "actionmailer", "~> 7.2.0"
-gem "actionpack", "~> 7.2.0"
+gem "actionmailer", "~> 8.0.0"
+gem "actionpack", "~> 8.0.0"
 gem "actionview", "~> 7.2.0"
 gem "activemodel", "~> 7.2.0"
 gem "activerecord", "~> 7.2.0"
 gem "activesupport", "~> 7.2.0"
-gem "railties", "~> 7.2.0"
+gem "railties", "~> 8.0.0"
 gem "sprockets-rails"
 
 gem "json"
 
 # TODO: At the moment Discourse does not work with Sprockets 4, we would need to correct internals
 # We intend to drop sprockets rather than upgrade to 4.x
-gem "sprockets", "~> 3.7.3"
+gem "sprockets", "~> 4.2.0"
 
 # this will eventually be added to rails,
 # allows us to precompile all our templates in the unicorn master
@@ -56,7 +56,7 @@ gem "http_accept_language", require: false
 gem "discourse-fonts", require: "discourse_fonts"
 gem "discourse-emojis", require: "discourse_emojis"
 
-gem "message_bus"
+gem "message_bus", ">= 4.4.0"
 
 gem "rails_multisite"
 
@@ -76,14 +76,14 @@ gem "nokogiri"
 gem "loofah"
 gem "css_parser", require: false
 
-gem "omniauth"
-gem "omniauth-facebook"
+gem "omniauth", ">= 2.1.3"
+gem "omniauth-facebook", ">= 10.0.0"
 gem "omniauth-twitter"
-gem "omniauth-github"
+gem "omniauth-github", ">= 2.0.1"
 
-gem "omniauth-oauth2", require: false
+gem "omniauth-oauth2", ">= 1.8.0", require: false
 
-gem "omniauth-google-oauth2"
+gem "omniauth-google-oauth2", ">= 1.1.0"
 
 gem "oj"
 
@@ -97,7 +97,7 @@ gem "rake"
 
 gem "thor", require: false
 gem "diffy", require: false
-gem "sidekiq"
+gem "sidekiq", ">= 7.0.0"
 gem "mini_scheduler"
 
 gem "execjs", require: false
@@ -107,7 +107,7 @@ gem "highline", require: false
 
 gem "rack"
 
-gem "rack-protection" # security
+gem "rack-protection" , ">= 4.0.0" # security
 gem "cbor", require: false
 gem "cose", require: false
 gem "addressable"
@@ -145,13 +145,13 @@ group :test, :development do
 
   gem "rb-fsevent", require: RUBY_PLATFORM =~ /darwin/i ? "rb-fsevent" : false
 
-  gem "rspec-rails"
+  gem "rspec-rails", ">= 8.0.0"
 
   gem "shoulda-matchers", require: false
   gem "rspec-html-matchers"
   gem "pry-stack_explorer", require: false
   gem "byebug", require: ENV["RM_INFO"].nil?, platform: :mri
-  gem "rubocop-discourse", require: false
+  gem "rubocop-discourse", ">= 3.12.0", require: false
   gem "parallel_tests"
 
   gem "rswag-specs"
@@ -196,7 +196,7 @@ gem "htmlentities", require: false
 #  If you want to amend mini profiler to do the monkey patches in the railties
 #  we are open to it. by deferring require to the initializer we can configure discourse installs without it
 
-gem "rack-mini-profiler", require: ["enable_rails_patches"]
+gem "rack-mini-profiler", ">= 4.0.0", require: ["enable_rails_patches"]
 
 gem "unicorn", require: false, platform: :ruby
 gem "puma", require: false
@@ -255,10 +255,10 @@ gem "web-push"
 gem "colored2", require: false
 gem "maxminddb"
 
-gem "rails_failover", require: false
+gem "rails_failover", ">= 2.3.0", require: false
 
-gem "faraday"
-gem "faraday-retry"
+gem "faraday", ">= 2.12.3"
+gem "faraday-retry", ">= 2.3.0"
 
 # workaround for faraday-net_http, see
 # https://github.com/ruby/net-imap/issues/16#issuecomment-803086765
