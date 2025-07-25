@@ -14,7 +14,7 @@ gem "actionview", "~> 7.2.0"
 gem "activemodel", "~> 7.2.0"
 gem "activerecord", "~> 7.2.0"
 gem "activesupport", "~> 7.2.0"
-gem "railties", "~> 7.2.0"
+gem "railties", "~> 8.0.0"
 gem "sprockets-rails"
 
 gem "json"
@@ -58,7 +58,7 @@ gem "discourse-emojis", require: "discourse_emojis"
 
 gem "message_bus"
 
-gem "rails_multisite"
+gem "rails_multisite", ">= 7.0.0"
 
 gem "fastimage"
 
@@ -95,7 +95,7 @@ gem "rtlcss", require: false
 gem "messageformat-wrapper", require: false
 gem "rake"
 
-gem "thor", require: false
+gem "thor", ">= 1.4.0", require: false
 gem "diffy", require: false
 gem "sidekiq"
 gem "mini_scheduler"
@@ -145,7 +145,7 @@ group :test, :development do
 
   gem "rb-fsevent", require: RUBY_PLATFORM =~ /darwin/i ? "rb-fsevent" : false
 
-  gem "rspec-rails"
+  gem "rspec-rails", ">= 8.0.0"
 
   gem "shoulda-matchers", require: false
   gem "rspec-html-matchers"
@@ -255,7 +255,7 @@ gem "web-push"
 gem "colored2", require: false
 gem "maxminddb"
 
-gem "rails_failover", require: false
+gem "rails_failover", ">= 2.3.0", require: false
 
 gem "faraday"
 gem "faraday-retry"
