@@ -207,7 +207,7 @@ gem "rbtrace", require: false, platform: :mri
 gem "ruby-readability", require: false
 
 # rss gem is a bundled gem from Ruby 3 onwards
-gem "rss", require: false
+gem "rss", ">= 0.3.2", require: false
 
 gem "stackprof", require: false, platform: :mri
 gem "memory_profiler", require: false, platform: :mri
